@@ -7,7 +7,7 @@ export default function AnnouncementBanner() {
   const unit = (
     <>
       <span className="shrink-0 px-16 text-white/92 whitespace-nowrap">{MESSAGE}</span>
-      <span className="shrink-0 px-16 flex items-center justify-center">
+      <span className="shrink-0 px-8 flex items-center justify-center">
         <img src={vantageIcon} alt="" className="w-4 h-4 object-contain" style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }} />
       </span>
     </>
