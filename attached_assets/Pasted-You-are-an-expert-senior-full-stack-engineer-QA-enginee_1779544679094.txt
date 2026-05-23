@@ -1,0 +1,112 @@
+You are an expert senior full-stack engineer, QA engineer, and DevOps release specialist.
+Your task is to bring this project to production-ready status in a single autonomous run.
+
+You must:
+
+Analyse the entire codebase first
+Plan fixes internally
+Apply changes safely in logical order
+Continuously self-verify after each change
+Roll back or correct your own changes if you introduce issues
+
+⚠️ IMPORTANT OPERATING MODE:
+
+This is a SINGLE continuous task (no user pauses)
+However, internally you MUST treat this as staged execution:
+Build & runtime stability fixes
+Security fixes
+Email/third-party configuration validation
+Hardening (CORS, rate limiting, protections)
+Cleanup (unused files & dependencies)
+After each stage, you MUST verify:
+no build errors
+no runtime regressions
+no broken imports
+no broken routes or UI regressions
+
+If any issue is introduced, you must immediately fix it before continuing.
+
+REQUIRED TASKS
+1. Build stability fix
+
+Fix all compile/runtime errors.
+Priority: AnnouncementBanner.tsx error must be resolved first.
+Ensure full Vite build succeeds.
+
+2. API security hardening
+
+Secure GET /api/leads so it cannot be accessed publicly.
+Use a lightweight authentication method (API key or simple guard).
+
+Ensure:
+
+POST /api/leads still works
+no database schema changes
+3. Email system validation
+
+Fix all broken or placeholder links in email templates.
+Ensure production URLs are correct.
+
+Also verify:
+
+email system does not silently fail
+missing env vars are clearly handled
+4. Security hardening
+
+Apply:
+
+restricted CORS (production domain only)
+rate limiting on POST /api/leads
+
+Ensure no functional regressions.
+
+5. Cleanup & optimisation
+
+Remove ONLY confirmed unused:
+
+images (wix_* assets, unused pngs)
+unused dependencies (only if proven unused via imports)
+unused UI components
+
+If uncertain, DO NOT delete — flag instead.
+
+FINAL OUTPUT (VERY IMPORTANT)
+
+Provide a single final report including:
+
+all bugs found and fixed
+all security improvements applied
+all files/dependencies removed
+confirmation of production readiness (YES / NO)
+SAFETY RULES
+Never break working functionality while fixing other issues
+Never refactor architecture unnecessarily
+Never delete code unless confirmed unused
+Always self-validate after each change
+PRE-REQUISITE REQUIREMENTS (CHECK BEFORE STARTING)
+
+Before beginning, check if the project requires any of the following environment variables. If missing, do NOT proceed blindly — instead mock or safely degrade functionality:
+
+RESEND_API_KEY (email sending)
+RESEND_FROM_EMAIL (email sender)
+BUSINESS_EMAIL (recipient inbox)
+VITE_WHATSAPP_NUMBER (WhatsApp feature)
+VITE_POSTHOG_KEY (analytics)
+TURNSTILE_SITE_KEY + TURNSTILE_SECRET_KEY (bot protection)
+Any production domain variable used in CORS/email links
+
+If missing:
+
+Log clear warnings
+Do NOT crash the app
+Ensure graceful fallback behaviour
+GOAL
+
+End state must be:
+
+fully working build
+secure API
+no exposed data endpoints
+no broken UI components
+no placeholder production links
+production-ready stability confirmed

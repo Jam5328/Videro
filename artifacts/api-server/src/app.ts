@@ -25,7 +25,23 @@ app.use(
     },
   }),
 );
-app.use(cors());
+const allowedOrigins: string[] = [
+  process.env.PUBLIC_URL,
+  process.env.REPLIT_DEV_DOMAIN ? `https://${process.env.REPLIT_DEV_DOMAIN}` : undefined,
+  ...(process.env.REPLIT_DOMAINS ?? "").split(",").map((d) => `https://${d.trim()}`).filter(Boolean),
+].filter((o): o is string => typeof o === "string" && o.length > 0);
+
+app.use(
+  cors({
+    origin:
+      allowedOrigins.length > 0
+        ? allowedOrigins
+        : process.env.NODE_ENV === "production"
+          ? false
+          : true,
+    credentials: true,
+  }),
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

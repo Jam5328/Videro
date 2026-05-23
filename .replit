@@ -58,3 +58,4 @@ channel = "stable-25_05"
 [userenv]
 
 [userenv.shared]
+LEADS_API_KEY = "cbd008dc2e465b371653d5761710f999f3f316bb27c6df77dec89f52b07146b1"

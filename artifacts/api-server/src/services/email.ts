@@ -70,13 +70,14 @@ function autoResponseHtml(name: string): string {
             <p style="margin:0 0 16px;font-size:14px;color:#555;line-height:1.7;font-weight:300;">We've received your enquiry and will review your requirements shortly. You can expect a structured response within 48 hours.</p>
             <p style="margin:0 0 32px;font-size:14px;color:#555;line-height:1.7;font-weight:300;">In the meantime, feel free to browse our services or get in touch directly.</p>
             <!-- CTA -->
+            ${process.env.PUBLIC_URL ? `
             <table cellpadding="0" cellspacing="0">
               <tr>
                 <td style="background:linear-gradient(135deg,#7B2FE8,#3F60F0);padding:12px 28px;">
-                  <a href="https://yourdomain.co.uk/services" style="color:#ffffff;font-size:13px;font-weight:500;text-decoration:none;letter-spacing:1px;">View Our Services</a>
+                  <a href="${process.env.PUBLIC_URL}/services" style="color:#ffffff;font-size:13px;font-weight:500;text-decoration:none;letter-spacing:1px;">View Our Services</a>
                 </td>
               </tr>
-            </table>
+            </table>` : ""}
           </td>
         </tr>
         <!-- Footer -->

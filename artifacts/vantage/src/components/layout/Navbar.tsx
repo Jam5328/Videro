@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
+import vantageIconImg from "@/assets/images/vantage-icon.png";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -24,7 +25,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-end gap-3">
           <img
-            src="/src/assets/images/vantage-icon.png"
+            src={vantageIconImg}
             alt="Videro icon"
             className="w-7 h-7 object-contain object-bottom"
           />

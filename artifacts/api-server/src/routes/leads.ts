@@ -1,10 +1,33 @@
-import { Router } from "express";
+import { Router, type Request, type Response, type NextFunction } from "express";
 import { db, leadsTable } from "@workspace/db";
 import { desc } from "drizzle-orm";
 import { SubmitLeadBody } from "@workspace/api-zod";
 import { sendLeadEmails } from "../services/email";
+import { rateLimit } from "express-rate-limit";
 
 const router = Router();
+
+const submitLeadLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 10,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: "Too many requests. Please try again later." },
+});
+
+function requireLeadsApiKey(req: Request, res: Response, next: NextFunction): void {
+  const apiKey = process.env.LEADS_API_KEY;
+  if (!apiKey) {
+    res.status(503).json({ error: "Leads endpoint is not configured." });
+    return;
+  }
+  const provided = req.headers["x-api-key"];
+  if (provided !== apiKey) {
+    res.status(401).json({ error: "Unauthorised." });
+    return;
+  }
+  next();
+}
 
 /**
  * Cloudflare Turnstile server-side verification.
@@ -32,7 +55,7 @@ async function verifyTurnstile(token: string | undefined): Promise<boolean> {
   }
 }
 
-router.post("/leads", async (req, res) => {
+router.post("/leads", submitLeadLimiter, async (req, res) => {
   const parsed = SubmitLeadBody.safeParse(req.body);
   if (!parsed.success) {
     res.status(400).json({ error: "Invalid request body" });
@@ -85,7 +108,7 @@ router.post("/leads", async (req, res) => {
   }
 });
 
-router.get("/leads", async (req, res) => {
+router.get("/leads", requireLeadsApiKey, async (req, res) => {
   try {
     const leads = await db
       .select()
