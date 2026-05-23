@@ -1,22 +1,19 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { useBanner } from "@/context/BannerContext";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [atTop, setAtTop] = useState(true);
-  const { bannerHeight } = useBanner();
 
   useEffect(() => {
-    const onScroll = () => setAtTop(window.scrollY < 8 + bannerHeight);
+    const onScroll = () => setAtTop(window.scrollY < 8);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [bannerHeight]);
+  }, []);
 
   return (
     <header
-      style={{ top: bannerHeight }}
-      className={`fixed z-50 w-full transition-all duration-400 ${
+      className={`fixed top-0 z-50 w-full transition-all duration-400 ${
         atTop
           ? "bg-transparent border-b border-transparent"
           : "bg-white border-b border-border shadow-sm"

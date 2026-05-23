@@ -11,10 +11,6 @@ import Pricing from "@/pages/Pricing";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import PromoBanner from "@/components/layout/PromoBanner";
-import { BannerProvider } from "@/context/BannerContext";
-
-const PROMO_BANNER_ENABLED = true;
 
 const queryClient = new QueryClient();
 
@@ -47,19 +43,16 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <BannerProvider enabled={PROMO_BANNER_ENABLED}>
-          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-            <div className="flex flex-col min-h-[100dvh] bg-background text-foreground font-sans">
-              <PromoBanner />
-              <Navbar />
-              <main className="flex-1 w-full">
-                <Router />
-              </main>
-              <Footer />
-            </div>
-            <WhatsAppButton />
-          </WouterRouter>
-        </BannerProvider>
+        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+          <div className="flex flex-col min-h-[100dvh] bg-background text-foreground font-sans">
+            <Navbar />
+            <main className="flex-1 w-full">
+              <Router />
+            </main>
+            <Footer />
+          </div>
+          <WhatsAppButton />
+        </WouterRouter>
         <Toaster />
       </TooltipProvider>
     </QueryClientProvider>
