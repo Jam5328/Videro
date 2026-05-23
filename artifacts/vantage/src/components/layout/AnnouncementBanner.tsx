@@ -1,11 +1,12 @@
+import vantageIcon from "@/assets/images/vantage-icon.png";
+
 const MESSAGE = "Launch Offer — Complimentary Inventory & 360° Tour Services for Selected Airbnb Hosts & Landlords";
-const SEPARATOR = "✦";
 const REPEAT = 6;
 
 export default function AnnouncementBanner() {
   const items = Array.from({ length: REPEAT }, (_, i) => (
-    <span key={i} className="shrink-0 flex items-center gap-6 px-6">
-      <span className="text-white/40 text-[10px]">{SEPARATOR}</span>
+    <span key={i} className="shrink-0 flex items-center gap-5 px-5">
+      <img src={vantageIcon} alt="" className="w-3.5 h-3.5 object-contain opacity-70" />
       <span>{MESSAGE}</span>
     </span>
   ));

@@ -139,7 +139,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.92);
-  animation: marquee-scroll 40s linear infinite;
+  animation: marquee-scroll 70s linear infinite;
 }
 
 /* ── Dark-section form inputs ─────────────────────────────────────────────── */
