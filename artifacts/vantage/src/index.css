@@ -124,6 +124,24 @@
   animation: marquee-scroll 28s linear infinite;
 }
 
+/* Announcement banner */
+.banner-track {
+  overflow: hidden;
+  width: 100%;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  animation: marquee-scroll 40s linear infinite;
+}
+
 /* ── Dark-section form inputs ─────────────────────────────────────────────── */
 /* Applied via .dark-form wrapper on LeadForm within dark-background sections  */
 .dark-form label {

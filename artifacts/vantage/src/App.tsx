@@ -9,6 +9,7 @@ import Services from "@/pages/Services";
 import About from "@/pages/About";
 import Pricing from "@/pages/Pricing";
 import Navbar from "@/components/layout/Navbar";
+import AnnouncementBanner from "@/components/layout/AnnouncementBanner";
 import Footer from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
@@ -46,7 +47,8 @@ function App() {
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
           <div className="flex flex-col min-h-[100dvh] bg-background text-foreground font-sans">
             <Navbar />
-            <main className="flex-1 w-full">
+            <AnnouncementBanner />
+            <main className="flex-1 w-full pt-8">
               <Router />
             </main>
             <Footer />
