@@ -6,14 +6,12 @@ const REPEAT = 5;
 
 export default function AnnouncementBanner() {
   const unit = (
-    <>
-      <span className="shrink-0 px-16 text-white/92 whitespace-nowrap">
+    <span className="shrink-0 flex items-center whitespace-nowrap">
+      <img src={vantageIcon} alt="" className="w-4 h-4 object-contain mr-3" style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }} />
+      <span className="text-white/92 pr-20">
         <span className="font-semibold">{MESSAGE_BOLD}</span>{MESSAGE_REST}
       </span>
-      <span className="shrink-0 px-8 flex items-center justify-center">
-        <img src={vantageIcon} alt="" className="w-4 h-4 object-contain" style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }} />
-      </span>
-    </>
+    </span>
   );
 
   return (
