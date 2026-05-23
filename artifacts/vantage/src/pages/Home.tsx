@@ -54,13 +54,14 @@ export default function Home() {
             transition={{ duration: 0.9 }}
             className="flex flex-col items-center gap-3 sm:gap-5"
           >
-            <img
-              src={vantageIcon}
-              alt="Videro"
-              className="w-12 h-12 sm:w-20 sm:h-20 md:w-28 md:h-28 object-contain"
-            />
-            <h1 className="text-5xl sm:text-7xl md:text-9xl font-serif text-white tracking-[0.12em] uppercase leading-none">
-              VIDERO
+            <h1 className="flex items-center justify-center text-5xl sm:text-7xl md:text-9xl font-serif text-white tracking-[0.06em] uppercase leading-none">
+              VID
+              <img
+                src={vantageIcon}
+                alt="Videro"
+                className="w-8 h-8 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain mx-1 sm:mx-2 md:mx-3 -translate-y-1"
+              />
+              ERO
             </h1>
             <p className="text-xs sm:text-base md:text-lg text-white/60 font-light tracking-[0.2em] uppercase">
               Every detail, professionally captured
