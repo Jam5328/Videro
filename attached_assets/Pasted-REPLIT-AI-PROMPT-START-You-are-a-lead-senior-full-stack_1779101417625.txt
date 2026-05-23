@@ -1,0 +1,182 @@
+REPLIT AI PROMPT START
+You are a lead senior full-stack developer and UI/UX designer.
+Your task is to rebuild an existing Wix website into a premium, production-ready property technology website called:
+VANTAGE
+This is a full redesign and rebuild, not a template conversion.
+1. SOURCE INSPIRATION
+You must visually and stylistically reference the existing Wix site:
+https://owen3118.wixsite.com/website-4⁠�
+BUT DO NOT COPY STRUCTURE OR WORDING.
+Instead:
+reuse its visual identity system:
+icon style
+colour palette
+background stock imagery style
+but upgrade everything to a premium SaaS-level property systems brand
+2. NEW BRAND IDENTITY
+Brand name: VANTAGE
+Tagline: Added clarity = added confidence
+Positioning: A premium property documentation and visual systems company.
+Core services:
+Residential property inventories (PRIMARY)
+360° property tours (PRIMARY)
+Secondary services:
+check-in / check-out reports
+property inspections
+documentation systems
+marketing media support
+Target users:
+letting agencies
+property managers
+serviced accommodation operators
+Airbnb hosts (secondary)
+3. BUSINESS MODEL POSITIONING
+This is NOT a photography or creative portfolio site.
+It is:
+a property operational documentation system designed for risk reduction, clarity, and professional reporting.
+4. KEY PROBLEMS TO INCLUDE (IMPORTANT CONVERSION SECTION)
+Add a section titled:
+“Problems We Solve”
+Include:
+For letting agencies:
+inconsistent inventory reporting across properties
+disputes due to lack of visual evidence
+inefficient check-in / check-out workflows
+fragmented documentation systems
+lack of standardisation across contractors
+For landlords / SA operators:
+damage disputes with insufficient evidence
+unclear property condition tracking
+poor quality listing visuals
+inefficient reporting processes
+reactive maintenance due to lack of documentation
+Tone: professional, factual, not emotional.
+5. WEBSITE STRUCTURE (MULTI-PAGE)
+HOME PAGE
+HERO SECTION
+VANTAGE (large, premium typography)
+“Added clarity = added confidence”
+CTA buttons:
+Book a Call
+Request Information
+Background:
+cinematic property imagery using existing Wix-style visuals with dark overlay
+VALUE PROPOSITION
+Explain:
+6 years property management experience
+inventories + inspections + check-ins/outs background
+purpose-built to improve property documentation standards
+CORE SERVICES
+Cards:
+Residential Inventories (primary)
+360 Property Tours (primary)
+Each must clearly communicate:
+evidence
+clarity
+risk reduction
+SECONDARY SERVICES
+inspections
+check-in/out reports
+documentation packages
+marketing media
+HOW IT WORKS
+Book
+Capture
+Document
+Deliver
+TRUST SECTION
+Must include credibility signals:
+6 years property management experience
+lettings agency exposure
+inventories and dispute experience
+DPS / Property Redress Scheme context
+LEAD CAPTURE SYSTEM (CRITICAL)
+Create fully functional form:
+name
+email
+company
+property type dropdown:
+lettings agency
+property manager
+serviced accommodation operator
+Airbnb host
+message
+On submission:
+store in Supabase database
+trigger automated confirmation email
+tag source page
+SERVICES PAGE
+Detailed breakdown of:
+inventories
+360 tours
+inspections
+documentation systems
+Each section includes:
+description
+use cases
+benefits for agencies
+ABOUT PAGE (STRUCTURED DATA ONLY)
+Do NOT write narrative paragraphs.
+Instead, create an “Operator Profile” system using structured bullet data:
+6 years property management experience
+lettings agency exposure
+inventories, check-ins, check-outs conducted
+DPS / Property Redress Scheme familiarity
+maintenance and landlord coordination experience
+customer-facing sales/service experience
+basic photography and editing skills (hobby level)
+minor 360 camera experience
+Include:
+strengths (bullet list only)
+working style (bullet list only)
+motivation for starting Vantage (bullet summary only)
+PRICING SECTION (IMPORTANT)
+Do NOT hardcode prices.
+Instead include:
+“Indicative Market Positioning”
+Explain:
+pricing is benchmarked against Bristol / BS36 1HH area providers
+competitively positioned within:
+inventory providers
+360 property tour providers
+inspection/reporting services
+State:
+pricing varies by property size and portfolio volume
+agency packages available for multi-property clients
+DESIGN REQUIREMENTS
+reuse Wix visual identity system:
+icons
+colours
+imagery style
+upgrade layout to SaaS-level premium design
+dark, modern, minimal aesthetic
+cinematic property visuals
+strong typography hierarchy
+generous whitespace
+subtle animations (fade, hover, scroll)
+Stock images must be integrated as a core visual system, not decorative filler.
+TECH STACK
+Next.js (App Router)
+Tailwind CSS
+Framer Motion
+Supabase (database + CRM)
+Email automation (Supabase or Nodemailer)
+Replit deployable
+FUNCTIONAL REQUIREMENTS
+fully responsive
+SEO optimised
+fast loading
+working forms
+database storage
+email automation working
+multi-page navigation
+production-grade UI polish
+FINAL OBJECTIVE
+Create a website that feels like:
+A legitimate property systems company capable of servicing agencies managing multi-million pound property portfolios.
+It must communicate:
+clarity
+control
+documentation quality
+operational reliability
+risk reduction

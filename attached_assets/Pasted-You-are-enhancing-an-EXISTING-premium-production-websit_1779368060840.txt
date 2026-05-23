@@ -1,0 +1,335 @@
+You are enhancing an EXISTING premium production website called VANTAGE hosted on Replit.
+
+IMPORTANT:
+This is NOT a redesign.
+This is NOT a rebuild.
+This is NOT a refactor project.
+
+The existing architecture, visual identity, typography, spacing system, animations, routing, responsiveness, and branding MUST remain intact.
+
+The current site has already had significant investment and design work.
+
+Your job is ONLY to enhance and extend the current functionality while preserving the existing frontend architecture and visual quality.
+
+==================================================
+PRIMARY OBJECTIVE
+
+Improve the website’s lead conversion experience while maintaining the current premium/luxury/corporate aesthetic.
+
+The business provides landlord services to landlords and agencies.
+
+The site should feel:
+
+- luxury
+- efficient
+- modern
+- trustworthy
+- premium startup quality
+- polished and frictionless
+
+DO NOT:
+
+- replace existing libraries
+- regenerate the frontend
+- change layouts unnecessarily
+- alter typography
+- remove animations
+- replace routing
+- rebuild components
+- touch unrelated sections
+
+ONLY:
+
+- enhance the enquiry flow
+- add conversion-focused success states
+- add future-proof demo infrastructure
+- add analytics
+- add anti-spam protection
+- add automated email support architecture
+- preserve all existing design systems
+
+==================================================
+PART 1 — ENQUIRY SUCCESS FLOW ENHANCEMENT
+
+CURRENT PROBLEM:
+After form submission, the UX ends abruptly.
+
+REQUIRED SOLUTION:
+Replace the existing post-submit behaviour with a premium animated success state.
+
+REQUIREMENTS:
+
+- DO NOT reload the page
+- DO NOT redirect away
+- DO NOT clear abruptly
+- Preserve smooth UX continuity
+
+After successful submission:
+
+1. Fade/animate the form out smoothly
+2. Replace it with a confirmation card
+3. Use subtle premium animation only
+4. Maintain current visual language
+
+SUCCESS CARD CONTENT:
+Headline:
+“Enquiry Received”
+
+Body:
+“Thanks for reaching out. We’ve received your enquiry and will contact you shortly via email.”
+
+Buttons:
+
+1. “View Demo Examples”
+2. “Continue on WhatsApp”
+
+The success card must:
+
+- inherit current styling system
+- be responsive
+- support dark/light theme if applicable
+- preserve current spacing/animation patterns
+
+==================================================
+PART 2 — FUTURE-PROOF DEMO SYSTEM
+
+The business does NOT yet have demo assets.
+
+You must build a lightweight future-ready demo showcase infrastructure WITHOUT breaking the current site.
+
+REQUIREMENTS:
+
+- modal popup implementation only
+- clean corporate showcase style
+- elegant minimal presentation
+- reusable architecture
+
+The system must support future uploads of:
+
+- PDFs
+- inventory reports
+- 360 imagery
+- embedded viewers
+- image galleries
+- videos
+
+IMPLEMENTATION REQUIREMENTS:
+
+- Create reusable modal gallery component
+- Add placeholder demo cards
+- Add empty-state handling
+- Add scalable data structure for future demos
+
+The modal should:
+
+- open smoothly
+- trap focus correctly
+- close gracefully
+- support mobile
+- support future pagination if needed
+
+IMPORTANT:
+DO NOT add fake demo content.
+Use tasteful placeholders only.
+
+==================================================
+PART 3 — WHATSAPP CTA INFRASTRUCTURE
+
+A business WhatsApp number has NOT yet been created.
+
+Build the system so the number can later be inserted via:
+
+- environment variable
+  OR
+- centralized config
+
+Requirements:
+
+- WhatsApp CTA button component
+- hidden/disabled gracefully if no number exists
+- no broken links
+- reusable component architecture
+
+Future format:
+https://wa.me/<NUMBER>?text=<ENCODED_MESSAGE>
+
+Implement helper utility for future insertion.
+
+==================================================
+PART 4 — EMAIL AUTOMATION ARCHITECTURE
+
+The domain email is NOT yet configured.
+
+Prepare the architecture NOW so email functionality works immediately once credentials are added later.
+
+Use:
+
+- Resend integration architecture
+- environment variable configuration
+- clean abstraction layer
+
+DO NOT hardcode secrets.
+
+REQUIREMENTS:
+
+1. Create backend email service abstraction
+2. Add placeholder environment variables
+3. Add clear setup comments
+4. Add graceful fallback handling if credentials are missing
+
+Required future emails:
+A. Auto-response email to user
+B. Internal notification email to business owner
+
+AUTO-RESPONSE EMAIL STYLE:
+
+- premium startup tone
+- clean minimal design
+- logo-ready
+- CTA-ready
+- WhatsApp-ready
+- dark-mode friendly
+
+INTERNAL EMAIL SHOULD INCLUDE:
+
+- enquiry details
+- timestamp
+- source page if available
+
+IMPORTANT:
+DO NOT break existing form functionality if email credentials are absent.
+
+==================================================
+PART 5 — ANALYTICS IMPLEMENTATION
+
+Implement lightweight analytics using PostHog.
+
+PRIMARY TRACKING EVENT:
+
+- enquiry submissions
+
+SECONDARY OPTIONAL EVENTS:
+
+- demo modal opens
+- WhatsApp CTA clicks
+
+IMPORTANT:
+Analytics MUST:
+
+- not degrade performance
+- not block rendering
+- not affect UX smoothness
+- lazy load where appropriate
+
+If session replay can be enabled safely WITHOUT impacting site performance significantly, include architecture support but keep it disabled by default.
+
+==================================================
+PART 6 — SPAM/BOT PROTECTION
+
+Implement Cloudflare Turnstile support.
+
+Requirements:
+
+- invisible implementation preferred
+- preserve frictionless UX
+- backend verification required
+- environment variable setup
+- graceful failure handling
+
+DO NOT:
+
+- use Google reCAPTCHA
+- introduce ugly CAPTCHA flows
+
+If Turnstile keys are absent:
+
+- form should still function in development mode
+- log warnings cleanly
+
+==================================================
+PART 7 — TECHNICAL SAFETY RULES
+
+CRITICAL:
+Preserve the current architecture.
+
+DO NOT:
+
+- refactor unrelated components
+- migrate frameworks
+- rewrite routing
+- replace state management
+- alter build tooling
+- touch animations unrelated to enquiry flow
+- regenerate CSS systems
+- modify typography scale
+- alter navbar/footer structures unnecessarily
+
+Enhancements must be:
+
+- additive
+- isolated
+- modular
+- production-safe
+
+==================================================
+PART 8 — CODE QUALITY REQUIREMENTS
+
+All additions must:
+
+- use existing TypeScript standards
+- follow current project conventions
+- preserve linting/style patterns
+- avoid duplicated logic
+- avoid unnecessary dependencies
+- include loading/error states
+- include graceful fallbacks
+
+All new services/components should be:
+
+- modular
+- reusable
+- documented minimally
+- easy to configure later
+
+==================================================
+PART 9 — PERFORMANCE REQUIREMENTS
+
+The current premium feel and responsiveness MUST remain.
+
+DO NOT introduce:
+
+- layout shifts
+- blocking requests
+- heavy animation libraries
+- large dependencies
+- excessive rerenders
+
+Prioritize:
+
+- smoothness
+- responsiveness
+- minimalism
+- premium polish
+
+==================================================
+PART 10 — FINAL IMPLEMENTATION DELIVERABLES
+
+Provide:
+
+1. All code changes
+2. New component files
+3. Required environment variables
+4. Setup instructions
+5. Placeholder config locations
+6. Safe fallback handling
+7. Minimal comments explaining future setup
+
+DO NOT:
+
+- output pseudo-code only
+- leave incomplete placeholders
+- suggest rewrites
+
+Implement directly into the existing codebase carefully and conservatively.
+
+The site should look visually almost identical after implementation — only more polished, more conversion-focused, and operationally ready.

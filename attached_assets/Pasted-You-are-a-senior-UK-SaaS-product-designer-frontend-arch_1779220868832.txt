@@ -1,0 +1,283 @@
+You are a senior UK SaaS product designer, frontend architect, and AI-assisted Replit implementation engineer working on the live VANTAGE website. The site is already fully functional and running correctly after dependencies were installed.
+
+IMPORTANT:
+
+* Do NOT modify or break the current working build.
+* Preserve all existing functionality, routing, responsiveness, animations, and integrations.
+* Before making changes, ensure all dependencies are automatically installed and validated during setup/startup so the project never fails to run again because of missing dependencies.
+* Add or verify:
+
+  * proper install scripts
+  * dependency validation checks
+  * startup checks
+  * lockfile consistency
+  * environment validation
+  * clear README setup instructions
+* Ensure `npm install` / `pnpm install` runs automatically where appropriate in deployment/start scripts.
+* Preserve compatibility with Replit deployments.
+
+Your task is to implement ALL of the following production-ready website refinements in one pass with polished UI/UX consistency, clean spacing, excellent typography hierarchy, and UK-market language throughout.
+
+---
+
+## GLOBAL REQUIREMENTS
+
+* Keep all language UK English.
+* Maintain the premium, structured, modern VANTAGE brand aesthetic.
+* Ensure all pages remain fully responsive across desktop, tablet, and mobile.
+* Preserve existing SEO structure and semantic HTML.
+* Do not introduce placeholder copy.
+* Do not reintroduce:
+
+  * “Build yours free”
+  * “Made with Replit”
+* Ensure all animations are subtle, smooth, and premium.
+* Maintain accessibility standards and proper contrast ratios.
+* Preserve current routing and page structure unless explicitly changed below.
+
+---
+
+## HEADER / NAVIGATION
+
+1. HEADER ALIGNMENT
+
+* Realign the VANTAGE logo so the bottom edge of the logo aligns perfectly with the bottom of the “Vantage” text in the header/taskbar.
+
+2. TRANSLUCENT NAVBAR EFFECT
+
+* On the homepage only:
+
+  * Make the top navigation/header translucent initially.
+  * Preserve visibility of:
+
+    * Services
+    * About
+    * Pricing
+  * As the user scrolls down:
+
+    * smoothly transition the navbar background into the current solid white version.
+  * Add subtle blur/glassmorphism effect while transparent.
+  * Ensure text contrast remains readable over hero background.
+
+---
+
+## HERO SECTION
+
+3. HERO CTA UPDATE
+
+* Change:
+
+  * “Book a Call”
+    TO:
+  * “Enquire”
+
+4. REMOVE REPLIT BRANDING
+
+* Completely remove:
+
+  * “Build yours free”
+  * “Made with Replit”
+
+---
+
+## STATISTICS / EXPERIENCE SECTION
+
+Replace the entire current stats copy:
+
+CURRENT:
+“6 Years
+Direct property management and lettings agency experience
+
+100%
+Audit-ready
+Documentation built to withstand DPS and Property Redress Scheme scrutiny
+
+24h
+Turnaround
+Rapid delivery of inventory and inspection reporting”
+
+WITH:
+
+“6+ Years
+Experience in property management, including lettings agency workflows, tenancy lifecycle oversight, and landlord reporting.
+
+100% Audit-ready documentation
+Structured inventory and inspection reporting designed to support dispute resolution processes and align with DPS and Property Redress Scheme standards.
+
+48h Turnaround
+Reliable delivery of structured inventories, inspections and 360 documentation within 48 hours, depending on property size and scope.”
+
+Requirements:
+
+* Improve typography hierarchy.
+* Reduce excessive spacing.
+* Make this section feel more premium and editorial.
+* Ensure line breaks and mobile layout remain elegant.
+
+---
+
+## CLIENT LOGO STRIP
+
+5. “USED BY CLIENTS OPERATING ACROSS”
+
+* Reduce unnecessary vertical whitespace in this section.
+* Keep the same horizontal spacing relationship starting from Airbnb and VRBO logos.
+* Convert the logos into a smooth continuously sliding marquee/banner effect.
+* Movement should feel subtle, premium, and modern.
+* Infinite loop animation.
+* Pause animation on hover if possible.
+* Ensure mobile responsiveness.
+
+---
+
+## PROBLEMS WE SOLVE SECTION
+
+Replace all current content with:
+
+“For Letting Agencies
+
+— Inconsistent inventory standards across properties, branches, and contractors, leading to unreliable reporting quality.
+— Weak or incomplete documentation that fails to hold up during deposit disputes or claim processes.
+— Time-heavy check-in and check-out workflows that are inconsistent across staff and locations.
+— Lack of a unified reporting structure across externally produced inventories and inspections.
+— Variation in report quality between contractors, creating compliance and liability risk.
+
+For Landlords & Serviced Accommodation Operators
+
+— Disputes arising from missing or incomplete baseline condition records at the start of tenancies.
+— Limited visibility of property condition between inspections, leading to reactive rather than preventative maintenance.
+— Underperforming listing visuals that fail to accurately represent property condition or appeal.
+— Fragmented or inconsistent reporting across multiple properties or platforms.
+— Delayed issue identification due to lack of structured, repeatable inspection data.”
+
+Requirements:
+
+* Maintain clean visual hierarchy.
+* Preserve premium spacing and readability.
+* Improve section structure if necessary using cards, columns, or grouped layouts.
+* Ensure mobile readability is excellent.
+
+---
+
+## ENQUIRY PAGE UPDATES
+
+6. FORM FIELD PLACEHOLDERS
+   Update placeholders:
+
+* Remove all “Enter your...” text.
+
+Use:
+
+* “Full name”
+* “Email address”
+
+Change:
+
+* “Organisation”
+  TO:
+* “Organization name”
+
+7. DROPDOWN DEFAULTS
+
+* Add:
+
+  * “Please Select”
+    as the default dropdown text.
+
+8. DROPDOWN OPTION UPDATE
+   Replace:
+
+* “Property Manager”
+  WITH:
+* “Independent Landlord”
+
+9. ENQUIRY PAGE COPY UPDATE
+
+Replace current text:
+
+“Make an Enquiry
+Tell us about your portfolio and requirements. We will respond with a proposal tailored to your operation.
+Serving: Bristol & BS36 area
+Turnaround: 24–48 hours
+Agency packages available”
+
+WITH:
+
+“Make an Enquiry
+
+Provide details of your portfolio, property type, or requirements. We respond with a structured proposal aligned to your operational and documentation needs.
+
+Serving: Bristol & surrounding areas
+Turnaround: 48 hours
+Agency & portfolio packages available”
+
+Requirements:
+
+* Improve spacing and typography.
+* Keep premium tone.
+* Ensure form feels high-end and trustworthy.
+
+---
+
+## SERVICES PAGE COLOUR UPDATES
+
+10. SERVICES PAGE
+    Change the text colour of:
+
+* “Why it matters”
+* “Our capabilities”
+
+Use the exact same purple colour used for:
+
+* “Why Vantage”
+  on the homepage.
+
+---
+
+## ABOUT PAGE COLOUR UPDATES
+
+11. ABOUT PAGE SECTION HEADINGS
+    Apply the same homepage purple colour to:
+
+* The Operator
+* Background
+* Strengths
+* Working Style
+* Motivation
+
+---
+
+## ABOUT PAGE CTA UPDATE
+
+12. ABOUT PAGE CTA COPY
+    Replace:
+
+* “Ready to standardise your documentation?”
+
+WITH:
+
+* “Ready to bring structure to your property records?”
+
+---
+
+## FINAL QA REQUIREMENTS
+
+Before completion:
+
+* Test all pages for responsive behaviour.
+* Ensure navbar transitions work smoothly.
+* Ensure no layout shift occurs.
+* Ensure animations remain performant.
+* Ensure no Replit branding remains anywhere.
+* Ensure no dependency/startup issues remain.
+* Ensure all typography and spacing are visually consistent.
+* Ensure all language is tailored to the UK property and lettings market.
+* Ensure all components compile without warnings or TypeScript issues.
+* Preserve all existing functionality.
+
+At the end, provide:
+
+1. A concise summary of all implemented changes.
+2. Any files/components modified.
+3. Any dependency or configuration improvements added to prevent future startup issues.
+4. Confirmation that the build runs successfully after a fresh install.

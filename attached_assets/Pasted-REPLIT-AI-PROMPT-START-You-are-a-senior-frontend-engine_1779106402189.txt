@@ -1,0 +1,115 @@
+REPLIT AI PROMPT START
+You are a senior frontend engineer working inside an existing production GitHub repository.
+You are NOT building a new project.
+You are NOT scaffolding or regenerating an app.
+You are ONLY modifying and improving the existing codebase.
+0. REPOSITORY CONTEXT (CRITICAL)
+You are working inside this existing repository:
+👉 https://github.com/Jam5328/Vantage.git⁠�
+This project already exists, already runs, and already contains:
+Next.js frontend
+Supabase backend
+lead capture system
+existing pages and layout
+working functionality
+DO NOT reset, overwrite, or recreate it.
+1. NON-NEGOTIABLE RULE
+You must operate in:
+IN-PLACE REFACTOR MODE ONLY
+That means:
+keep all files unless absolutely necessary
+do not delete architecture
+do not regenerate the app
+do not create a new template project
+do not change framework or structure
+Only modify:
+UI styling
+layout structure (visual only)
+typography system
+spacing system
+component appearance
+2. PRIMARY OBJECTIVE
+Restyle the existing Vantage website UI so it visually matches the Wix website below:
+https://owen3118.wixsite.com/website-4⁠�
+This is a visual redesign only, not a rebuild.
+3. VISUAL TARGET (WIX PARITY)
+Match the Wix site as closely as possible:
+white editorial layout system
+full-width image sections
+soft dark overlays on images
+minimal and spacious spacing
+simple vertical scroll flow
+image-led storytelling structure
+subtle professional animations only
+calm, premium property brand feel
+DO NOT introduce SaaS, dashboard, or startup UI styles.
+4. IMAGE SYSTEM (DO NOT CHANGE DIRECTION)
+You must preserve existing imagery direction:
+Bristol UK property imagery must remain dominant
+existing images in repo should be kept where possible
+if replacements are needed, use equivalent high-quality Bristol residential photography style
+DO NOT:
+introduce illustrations
+introduce abstract tech graphics
+replace with SaaS stock images
+5. TYPOGRAPHY SYSTEM
+Match Wix-like typography feel:
+clean sans-serif font already in project OR closest equivalent
+large hero headings
+medium section headers
+light body text
+strong spacing hierarchy
+DO NOT switch to SaaS-style typography systems.
+6. LAYOUT RULES (WIX STRUCTURE)
+Refactor layout visually into Wix-style flow:
+Homepage structure:
+Hero (full-width image + overlay text)
+Value section
+Services section
+Problems section
+Trust section
+Contact section
+Rules:
+full-width sections preferred
+minimal card-based UI
+generous whitespace
+simple vertical scroll experience
+7. HERO SECTION (CRITICAL)
+Only restyle, do not restructure functionality:
+full-width background image (existing or Wix equivalent style)
+dark gradient overlay for readability
+VANTAGE title + tagline overlay
+minimal CTA buttons (“Enquire”, “Contact”)
+8. INTERACTIONS
+Match Wix-level subtlety:
+fade-in on scroll only
+minimal hover effects (slight lift or fade)
+no complex animations
+optional very subtle parallax on hero only
+9. NAVIGATION
+keep existing routing system intact
+keep multi-page structure unchanged
+logo top-left
+simple Wix-style top navigation
+10. CONTACT FORM (DO NOT BREAK)
+DO NOT modify backend logic:
+Supabase lead capture must remain unchanged
+email automation must remain unchanged
+Only restyle visually:
+simple Wix-style form layout
+clean inputs
+minimal design
+After submission:
+show inline thank you message (Wix-style behaviour)
+11. BRAND LOCK (DO NOT CHANGE)
+Brand: VANTAGE
+Tagline: Added clarity = added confidence
+Positioning: Property documentation and 360° visual systems for landlords, letting agencies, and property managers.
+12. FINAL OBJECTIVE
+The final result must:
+be a visual refactor of the existing repository ONLY
+closely match Wix website aesthetic
+preserve Bristol property imagery identity
+preserve all backend functionality
+eliminate SaaS/dashboard styling entirely
+feel like a premium property documentation brand site

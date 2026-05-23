@@ -1,0 +1,338 @@
+You are modifying an EXISTING premium production website hosted on Replit.
+
+CRITICAL:
+This is NOT a redesign.
+This is NOT a rebuild.
+This is NOT a refactor project.
+
+The website already has:
+
+* a polished frontend,
+* carefully tuned animations,
+* premium spacing,
+* responsive layouts,
+* established typography,
+* and significant development investment.
+
+Your task is ONLY to make the requested targeted UX/content/navigation enhancements while preserving:
+
+* the current architecture,
+* current styling,
+* current motion system,
+* current responsiveness,
+* current visual hierarchy,
+* and current performance.
+
+DO NOT:
+
+* regenerate components unnecessarily
+* change frameworks
+* alter layout structures
+* modify typography scales
+* change animation systems
+* alter spacing globally
+* introduce visual regressions
+* touch unrelated code
+
+Preserve the premium/luxury/corporate aesthetic exactly as-is.
+
+==================================================
+GLOBAL BRAND REPLACEMENT
+========================
+
+Replace ALL occurrences of:
+“Vantage”
+with:
+“Videro”
+
+This includes:
+
+* visible frontend text
+* metadata
+* page titles
+* descriptions
+* alt text
+* reusable constants
+* email templates
+* placeholders
+* navigation
+* footer
+* SEO metadata
+* Open Graph data
+* structured data if present
+
+IMPORTANT:
+Do NOT accidentally rename:
+
+* package names
+* dependencies
+* internal technical identifiers
+* unrelated variables that could break functionality
+
+This is a legal/copyright requirement.
+
+==================================================
+ENQUIRY FORM TEXT VISIBILITY FIX
+================================
+
+Current issue:
+The text typed into the “Make an Enquiry” form fields is not clearly visible to users.
+
+REQUIRED FIX:
+Ensure all user-entered text inside input and textarea fields displays in white and remains fully readable.
+
+Requirements:
+
+* preserve current design aesthetic
+* preserve focus states
+* preserve placeholder styling
+* preserve accessibility
+* ensure contrast remains premium and readable
+
+Do NOT:
+
+* alter layout
+* enlarge fields
+* redesign form
+
+Only fix text visibility cleanly.
+
+==================================================
+WHATSAPP FLOATING BUTTON
+========================
+
+Add a premium floating WhatsApp button globally across the site.
+
+Requirements:
+
+* subtle premium styling
+* responsive
+* non-intrusive
+* smooth hover animation
+* mobile-safe
+* fixed bottom corner placement
+* preserve current aesthetic
+
+The WhatsApp number must be configurable via environment variable:
+VITE_WHATSAPP_NUMBER
+
+If no number exists:
+
+* button should hide gracefully
+* no broken links
+
+Future URL structure:
+[https://wa.me/](https://wa.me/)<NUMBER>
+
+IMPORTANT:
+Do NOT use aggressive flashing or cheap-looking effects.
+
+Style should feel:
+
+* premium
+* modern
+* minimal
+* operationally polished
+
+==================================================
+REMOVE BUTTON
+=============
+
+Remove the button:
+“View Full Capabilities”
+
+Remove safely without breaking:
+
+* spacing
+* alignment
+* responsiveness
+* animation flow
+
+Do not leave awkward layout gaps.
+
+==================================================
+FOOTER SERVICES NAVIGATION FIXES
+================================
+
+Under the footer “Services” section:
+
+Ensure:
+
+* Residential Inventories → links to Services page section “01”
+* 360 Tours → links to Services page section “02”
+* Inspections & Reports → links to Services page section “03”
+
+Requirements:
+
+* smooth scrolling if already implemented
+* correct anchor linking
+* landing position aligned correctly at top of requested section
+* preserve current transitions
+
+Implement proper section IDs if needed.
+
+==================================================
+HOMEPAGE CTA BUTTON CHANGES
+===========================
+
+Remove:
+
+* “Get Protected”
+* “See Service Pricing”
+
+Replace with ONE button:
+“Get in Touch”
+
+Button behaviour:
+
+* scroll user to contact/enquiry form at bottom of homepage
+* smooth scrolling
+* preserve current animation behaviour
+* preserve current button styling system
+
+==================================================
+SERVICES PAGE PRICING BUTTON FIX
+================================
+
+Current issue:
+“Explore Pricing” button lands midway down pricing page.
+
+REQUIRED FIX:
+Ensure button navigates to TOP of pricing page.
+
+Requirements:
+
+* preserve transitions
+* preserve routing structure
+* no scroll offset bugs
+
+==================================================
+FOOTER ABOUT LINK FIX
+=====================
+
+Current issue:
+Footer “About” link lands at bottom/mid-page.
+
+REQUIRED FIX:
+Ensure “About” always opens at TOP of About page.
+
+Requirements:
+
+* preserve routing
+* preserve transitions
+* reset scroll position correctly
+
+==================================================
+ABOUT PAGE CTA CHANGES
+======================
+
+Remove buttons:
+
+* “Contact Me Directly”
+* “Book an Inspection”
+
+Replace with ONE button:
+“Get in Touch”
+
+Behaviour:
+
+* links/scrolls to contact form at bottom of homepage
+* smooth scroll if already implemented
+* preserve current styling and motion language
+
+==================================================
+FOOTER PRICING LINK FIX
+=======================
+
+Current issue:
+Footer pricing link lands midway through pricing page.
+
+REQUIRED FIX:
+Ensure pricing footer link always opens at TOP of pricing page.
+
+Requirements:
+
+* preserve routing system
+* correct scroll restoration behaviour
+
+==================================================
+PRICING PAGE CTA CHANGES
+========================
+
+Remove buttons:
+
+* “Request a Quote”
+* “View All Services”
+
+Replace with ONE button:
+“Get in Touch”
+
+Behaviour:
+
+* links to homepage contact form
+* smooth scroll behaviour
+* preserve existing styling hierarchy
+
+==================================================
+TECHNICAL IMPLEMENTATION RULES
+==============================
+
+CRITICAL:
+This project already functions well.
+
+ONLY make the requested targeted modifications.
+
+DO NOT:
+
+* refactor unrelated components
+* regenerate pages
+* rewrite navigation systems unnecessarily
+* alter responsiveness
+* replace animation libraries
+* touch typography systems
+* modify unrelated styling
+* remove reusable abstractions
+
+All fixes must be:
+
+* surgical
+* additive
+* minimal-risk
+* production-safe
+
+==================================================
+UX/PERFORMANCE REQUIREMENTS
+===========================
+
+Maintain:
+
+* current smoothness
+* current responsiveness
+* current premium feel
+* current loading performance
+
+Do NOT introduce:
+
+* layout shifts
+* hydration issues
+* flickering
+* oversized dependencies
+* broken scroll behaviour
+* animation stuttering
+
+==================================================
+FINAL REQUIREMENTS
+==================
+
+After implementation:
+
+* all routes should work correctly
+* all anchor links should land accurately
+* all CTA flows should feel intentional and polished
+* mobile responsiveness must remain intact
+* no visual regressions
+* no duplicate buttons
+* no dead links
+* no broken scroll behaviour
+
+The site should feel visually almost identical after implementation — only cleaner, more intentional, more conversion-focused, and legally updated from Vantage to Videro.

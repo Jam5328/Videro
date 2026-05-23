@@ -1,0 +1,364 @@
+You are a senior React, Tailwind, Framer Motion and UX engineer working on the VANTAGE.V2 website.
+
+The website already has an established dark luxury aesthetic with serif typography, deep navy backgrounds, premium spacing and smooth Framer Motion animations. Maintain the existing visual identity and do NOT redesign the site from scratch.
+
+Your task is to implement the following production-ready improvements across the site.
+
+GLOBAL REQUIREMENTS
+
+- Maintain the current VANTAGE.V2 visual identity
+- Keep all styling responsive
+- Preserve existing animations and transitions
+- Ensure excellent mobile responsiveness
+- Maintain accessibility and readability
+- Keep code clean and componentised
+- Use Tailwind classes consistently
+- Avoid bloated spacing on mobile
+- Preserve the premium dark UI aesthetic
+
+---
+
+1. HEADER NAVIGATION FIXES
+
+The desktop transparent header currently causes the “Services” and “About” links to become difficult to see against lighter backgrounds.
+
+Required Changes
+
+- Make ONLY the “Services” and “About” nav items slightly darker/more visible while the header is transparent
+- Do NOT change the entire navbar styling
+- Preserve hover transitions
+- Preserve transparent header behaviour
+- Ensure readability over hero imagery/backgrounds
+
+Desired Styling Direction
+
+Use something subtle such as:
+
+- slightly increased opacity
+- soft text shadow
+- slightly brighter text tone
+- subtle font-weight adjustment
+
+The result should remain elegant and minimal.
+
+---
+
+2. SERVICES PAGE → PRICING PAGE LINKING
+
+Add clear conversion paths from the Services page directly to the Pricing page.
+
+Required Changes
+
+Add:
+
+- CTA buttons
+- inline text links
+- service section links
+
+that direct users to:
+"/pricing"
+
+Suggested CTA Copy
+
+- “View Pricing”
+- “Explore Pricing”
+- “See Service Pricing”
+- “Request a Quote”
+
+These should:
+
+- match existing button styling
+- use Framer Motion hover effects if already present
+- feel premium and integrated into the existing UX
+
+---
+
+3. MOBILE FOOTER OPTIMISATION
+
+The footer currently takes up too much vertical space on mobile devices.
+
+Required Changes
+
+Tighten the mobile footer layout by:
+
+- reducing excessive padding/margins
+- decreasing vertical gaps
+- stacking content more efficiently
+- reducing oversized spacing between sections
+
+Important
+
+- Keep desktop footer largely unchanged
+- Maintain readability
+- Preserve premium appearance
+- Do NOT overcrowd content
+
+Target:
+
+- cleaner compact mobile footer
+- better above-the-fold mobile experience
+
+---
+
+4. ABOUT PAGE CONTENT REPLACEMENT
+
+Completely replace the existing About page content with the following professionally formatted copy.
+
+The page title should be:
+
+About Us
+
+Replace all existing body copy with the following content exactly as written below while improving typography, spacing and hierarchy to match the rest of the website.
+
+---
+
+CONTENT TO IMPLEMENT
+
+About Us
+
+Vantage was founded on years of direct, hands-on operational experience within the UK property sector. After managing thousands of tenancies, handling maintenance, and resolving complex landlord-tenant disputes, I recognised a critical market flaw. Too many operators, landlords, and agents were losing costly disputes simply due to poor, vague, or absent property documentation. Vantage was built to bridge this gap, replacing creative flair with absolute operational rigour right across Bristol and the surrounding areas.
+
+We provide a systems-driven methodology that prioritises bulletproof processes over personality. Our reporting is entirely factual, risk-aware, and built defensively to protect both your asset and your operation. Whether you need meticulous check-in reports or forensic mid-term inspections, we deliver an autonomous, highly professional service that requires zero oversight from you.
+
+Our deep expertise across the UK housing, compliance, and short-let markets allows us to protect a diverse range of clients:
+
+High-Street Lettings Agencies
+
+We deliver the exact legal standard of evidence your compliance teams require, fully aligned with the standards of the Deposit Protection Service (DPS), Tenancy Deposit Scheme (TDS), mydeposits, The Property Redress Scheme (PRS), and The Property Ombudsman (TPO).
+
+Independent Landlords
+
+We safeguard your high-value investments in Bristol and the South West with unemotional, legally robust documentation that stands up to scrutiny during tenant transitions and deposit disputes.
+
+Short-Let & Airbnb Hosts
+
+We provide rapid, detailed condition tracking tailored to high-turnover serviced accommodation (SA), ensuring guest damage is captured instantly before your next check-in.
+
+---
+
+FINAL CTA SECTION
+
+Ready to Protect Your Property Asset?
+
+Do not leave your compliance and asset protection to chance. Get in touch today to secure flawless, legally robust property documentation for your portfolio in Bristol and the surrounding areas.
+
+Add two CTA buttons:
+
+- Book an Inspection with Vantage
+- Contact Me Directly
+
+These should link appropriately to:
+
+- contact page
+- booking/contact form
+
+---
+
+5. ABOUT PAGE DESIGN REQUIREMENTS
+
+The updated About page should visually match the premium tone of the rest of the site.
+
+Include
+
+- large serif hero heading
+- structured content sections
+- elegant spacing
+- subtle dividers
+- premium typography hierarchy
+- smooth scroll animation reveals
+- responsive layout
+- strong readability
+
+Suggested Structure
+
+- Hero section
+- Intro narrative block
+- Methodology section
+- Client categories section
+- Final CTA banner
+
+---
+
+6. PRICING PAGE IMPLEMENTATION
+
+Create or fully replace the existing "src/pages/Pricing.tsx" page using the following exact React component implementation.
+
+Maintain:
+
+- dark luxury styling
+- premium spacing
+- serif typography
+- smooth hover interactions
+- responsive layouts
+- Framer Motion animations
+- “Enhanced Inventory” highlighted as “Most Popular”
+
+The pricing page must feel cohesive with the rest of the VANTAGE.V2 website and not like a separate template.
+
+Use the following implementation:
+
+import { motion } from "framer-motion";
+import { Check } from "lucide-react";
+
+const inventoryPricing = [
+  {
+    title: "Standard Inventory",
+    subtitle: "Professional photographic inventory reporting",
+    popular: false,
+    prices: [
+      ["Studio / Room", "£55"],
+      ["1 Bed", "£75"],
+      ["2 Bed", "£90"],
+      ["3 Bed", "£110"],
+      ["4+ Bed", "From £135"],
+    ],
+    features: [
+      "High-resolution photographic evidence",
+      "Meter readings",
+      "Digital PDF delivery",
+      "Legally structured reporting",
+      "Detailed condition logging",
+    ],
+  },
+  {
+    title: "Enhanced Inventory",
+    subtitle: "Inventory reporting with immersive 360° room views",
+    popular: true,
+    prices: [
+      ["Studio / Room", "£75"],
+      ["1 Bed", "£95"],
+      ["2 Bed", "£115"],
+      ["3 Bed", "£140"],
+      ["4+ Bed", "From £170"],
+    ],
+    features: [
+      "Everything in Standard Inventory",
+      "360° room documentation",
+      "Enhanced evidence capture",
+      "Improved dispute protection",
+      "Interactive room visuals",
+    ],
+  },
+  {
+    title: "Full Virtual Property Tour",
+    subtitle: "Premium immersive property walkthrough experience",
+    popular: false,
+    prices: [
+      ["Studio / Room", "£95"],
+      ["1 Bed", "£125"],
+      ["2 Bed", "£165"],
+      ["3 Bed", "£210"],
+      ["4+ Bed", "From £275"],
+    ],
+    features: [
+      "Interactive property walkthrough",
+      "Shareable virtual tour",
+      "Complete spatial documentation",
+      "Premium visual presentation",
+      "Ideal for agencies & remote landlords",
+    ],
+  },
+];
+
+const checkInOutPricing = [
+  {
+    title: "Check-In Reports",
+    prices: [
+      ["Studio / Room", "£35"],
+      ["1 Bed", "£45"],
+      ["2 Bed", "£55"],
+      ["3 Bed", "£70"],
+      ["4+ Bed", "From £85"],
+    ],
+    features: [
+      "Key handover confirmation",
+      "Tenant verification",
+      "Meter readings",
+      "Inventory confirmation",
+      "Digital report delivery",
+    ],
+  },
+  {
+    title: "Check-Out Reports",
+    prices: [
+      ["Studio / Room", "£50"],
+      ["1 Bed", "£65"],
+      ["2 Bed", "£80"],
+      ["3 Bed", "£95"],
+      ["4+ Bed", "From £120"],
+    ],
+    features: [
+      "Comparative condition reporting",
+      "Damage identification",
+      "Fair wear & tear assessment",
+      "Deposit evidence support",
+      "End-of-tenancy documentation",
+    ],
+  },
+];
+
+const inspectionPricing = [
+  ["Standard Property Inspection", "From £45"],
+  ["HMO Inspection", "From £65"],
+  ["Portfolio / Multi-Unit Inspection", "Custom Quote"],
+];
+
+const addOns = [
+  ["24-Hour Turnaround", "From £25"],
+  ["Weekend / Emergency Booking", "From £35"],
+  ["Additional 360° Coverage", "From £20"],
+  ["Maintenance Reporting Add-On", "From £15"],
+  ["Portfolio Reporting", "Custom Quote"],
+];
+
+export default function Pricing() {
+  return (
+    <div className="w-full overflow-hidden">
+      {/* Keep all styling/sections from supplied implementation */}
+    </div>
+  );
+}
+
+Expand the component fully using the supplied structure and preserve all section layouts:
+
+- Hero
+- Inventory Services
+- Check-In / Check-Out
+- Mid-Tenancy
+- Add-Ons
+- CTA
+
+Also add:
+
+- subtle hover lift animations
+- smooth transitions
+- mobile optimisation
+- responsive typography scaling
+
+---
+
+7. PRICING PAGE INTEGRATION
+
+Ensure the Pricing page is:
+
+- added to navigation
+- linked from Services page CTAs
+- fully mobile responsive
+- visually consistent with About and Services pages
+
+---
+
+8. FINAL QA REQUIREMENTS
+
+Before finishing:
+
+- verify all internal links work
+- ensure no layout shifts
+- ensure no text overflow on mobile
+- ensure footer spacing is corrected on small screens
+- verify navbar readability over transparent backgrounds
+- ensure typography consistency
+- preserve smooth Framer Motion transitions
+- preserve performance and responsiveness
+
+The final result should feel like a cohesive premium production website — not patched-together sections.

@@ -1,0 +1,173 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-mono: var(--app-font-mono);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* Wix brand palette — white background with navy text and purple-blue accent */
+:root {
+  --background: 0 0% 100%;          /* white */
+  --foreground: 240 64% 17%;        /* #16163F — Wix primary navy */
+  --card: 0 0% 98%;                 /* near-white card */
+  --card-foreground: 240 64% 17%;
+  --card-border: 240 20% 88%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 64% 17%;
+  --popover-border: 240 20% 88%;
+  --primary: 240 64% 17%;           /* navy primary (buttons on white bg) */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 240 20% 94%;         /* light navy-tinted gray */
+  --secondary-foreground: 240 64% 17%;
+  --muted: 240 15% 95%;
+  --muted-foreground: 240 13% 45%;  /* muted dark */
+  --accent: 262 84% 58%;            /* #7C3AED — Wix purple accent */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 20% 88%;            /* light border */
+  --input: 240 15% 95%;
+  --ring: 262 84% 58%;              /* purple ring */
+  --radius: 0rem;
+
+  --app-font-sans: "Inter", system-ui, sans-serif;
+  --app-font-serif: "Playfair Display", Georgia, serif;
+  --app-font-mono: ui-monospace, monospace;
+
+  /* Wix brand gradient — purple to blue */
+  --gradient-start: #7B2FE8;
+  --gradient-end: #3F60F0;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gradient-border {
+    border-image: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)) 1;
+  }
+  .navy-card {
+    background: hsl(0 0% 98%);
+    border: 1px solid hsl(240 20% 88%);
+  }
+}
+
+/* Marquee animation */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+}
+
+/* ── Dark-section form inputs ─────────────────────────────────────────────── */
+/* Applied via .dark-form wrapper on LeadForm within dark-background sections  */
+.dark-form label {
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 300;
+}
+
+.dark-form input,
+.dark-form textarea {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.dark-form input::placeholder,
+.dark-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.dark-form input:focus,
+.dark-form textarea:focus {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.28);
+  outline: none;
+}
+
+/* Select trigger (Radix combobox) in dark sections */
+.dark-form button[role="combobox"] {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.dark-form button[role="combobox"]:focus {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.dark-form button[role="combobox"] span[data-placeholder] {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+/* Error messages in dark sections */
+.dark-form [role="alert"],
+.dark-form p.text-destructive {
+  color: rgba(255, 120, 120, 0.9);
+}

@@ -1,0 +1,357 @@
+import { motion } from "framer-motion";
+import { Check } from "lucide-react";
+
+const inventoryPricing = [
+  {
+    title: "Standard Inventory",
+    subtitle: "Professional photographic inventory reporting",
+    popular: false,
+    prices: [
+      ["Studio / Room", "£55"],
+      ["1 Bed", "£75"],
+      ["2 Bed", "£90"],
+      ["3 Bed", "£110"],
+      ["4+ Bed", "From £135"],
+    ],
+    features: [
+      "High-resolution photographic evidence",
+      "Meter readings",
+      "Digital PDF delivery",
+      "Legally structured reporting",
+      "Detailed condition logging",
+    ],
+  },
+  {
+    title: "Enhanced Inventory",
+    subtitle: "Inventory reporting with immersive 360° room views",
+    popular: true,
+    prices: [
+      ["Studio / Room", "£75"],
+      ["1 Bed", "£95"],
+      ["2 Bed", "£115"],
+      ["3 Bed", "£140"],
+      ["4+ Bed", "From £170"],
+    ],
+    features: [
+      "Everything in Standard Inventory",
+      "360° room documentation",
+      "Enhanced evidence capture",
+      "Improved dispute protection",
+      "Interactive room visuals",
+    ],
+  },
+  {
+    title: "Full Virtual Property Tour",
+    subtitle: "Premium immersive property walkthrough experience",
+    popular: false,
+    prices: [
+      ["Studio / Room", "£95"],
+      ["1 Bed", "£125"],
+      ["2 Bed", "£165"],
+      ["3 Bed", "£210"],
+      ["4+ Bed", "From £275"],
+    ],
+    features: [
+      "Interactive property walkthrough",
+      "Shareable virtual tour",
+      "Complete spatial documentation",
+      "Premium visual presentation",
+      "Ideal for agencies & remote landlords",
+    ],
+  },
+];
+
+const checkInOutPricing = [
+  {
+    title: "Check-In Reports",
+    prices: [
+      ["Studio / Room", "£35"],
+      ["1 Bed", "£45"],
+      ["2 Bed", "£55"],
+      ["3 Bed", "£70"],
+      ["4+ Bed", "From £85"],
+    ],
+    features: [
+      "Key handover confirmation",
+      "Tenant verification",
+      "Meter readings",
+      "Inventory confirmation",
+      "Digital report delivery",
+    ],
+  },
+  {
+    title: "Check-Out Reports",
+    prices: [
+      ["Studio / Room", "£50"],
+      ["1 Bed", "£65"],
+      ["2 Bed", "£80"],
+      ["3 Bed", "£95"],
+      ["4+ Bed", "From £120"],
+    ],
+    features: [
+      "Comparative condition reporting",
+      "Damage identification",
+      "Fair wear & tear assessment",
+      "Deposit evidence support",
+      "End-of-tenancy documentation",
+    ],
+  },
+];
+
+const inspectionPricing = [
+  ["Standard Property Inspection", "From £45"],
+  ["HMO Inspection", "From £65"],
+  ["Portfolio / Multi-Unit Inspection", "Custom Quote"],
+];
+
+const addOns = [
+  ["24-Hour Turnaround", "From £25"],
+  ["Weekend / Emergency Booking", "From £35"],
+  ["Additional 360° Coverage", "From £20"],
+  ["Maintenance Reporting Add-On", "From £15"],
+  ["Portfolio Reporting", "Custom Quote"],
+];
+
+export default function Pricing() {
+  return (
+    <div className="w-full overflow-hidden">
+
+      {/* Hero */}
+      <section className="border-b border-white/10 py-24 md:py-32" style={{ backgroundColor: "#0D0D2A" }}>
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="space-y-5 max-w-3xl"
+          >
+            <p className="text-xs font-medium uppercase tracking-[0.25em] gradient-text">Transparent Pricing</p>
+            <h1 className="text-4xl md:text-6xl font-serif text-white leading-tight">
+              Clear, fixed pricing. No surprises.
+            </h1>
+            <p className="text-lg text-white/55 font-light leading-relaxed max-w-2xl">
+              All services are priced by property size and scope. Portfolio and agency packages are available — enquire for a tailored proposal.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Inventory Services */}
+      <section className="py-20 md:py-24 border-b border-white/10" style={{ backgroundColor: "#16163F" }}>
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-14"
+          >
+            <p className="text-xs font-medium uppercase tracking-[0.25em] gradient-text mb-4">Inventory Services</p>
+            <h2 className="text-3xl md:text-4xl font-serif text-white">Property Inventories</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px" style={{ backgroundColor: "rgba(255,255,255,0.07)" }}>
+            {inventoryPricing.map(({ title, subtitle, popular, prices, features }, i) => (
+              <motion.div
+                key={title}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="relative flex flex-col p-8 md:p-10"
+                style={{ backgroundColor: popular ? "#1a1a4e" : "#16163F" }}
+              >
+                {popular && (
+                  <div className="absolute top-0 inset-x-0 h-0.5 gradient-bg" />
+                )}
+                {popular && (
+                  <span className="inline-block mb-4 text-xs font-medium uppercase tracking-widest gradient-text">
+                    Most Popular
+                  </span>
+                )}
+                <div className="space-y-1 mb-8">
+                  <h3 className="text-xl font-serif text-white">{title}</h3>
+                  <p className="text-xs text-white/40 font-light">{subtitle}</p>
+                </div>
+
+                <div className="mb-8 space-y-2 border-b border-white/10 pb-8">
+                  {prices.map(([size, price]) => (
+                    <div key={size} className="flex items-baseline justify-between gap-4">
+                      <span className="text-sm text-white/50 font-light">{size}</span>
+                      <span className="text-sm font-medium text-white tabular-nums">{price}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <ul className="space-y-3 mb-8 flex-1">
+                  {features.map((f) => (
+                    <li key={f} className="flex items-start gap-3 text-sm text-white/55 font-light">
+                      <Check className="w-4 h-4 gradient-text shrink-0 mt-0.5" />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href="/#contact"
+                  className={`inline-flex h-10 items-center justify-center text-sm font-medium tracking-wide transition-opacity px-6 ${
+                    popular
+                      ? "gradient-bg text-white hover:opacity-90"
+                      : "border border-white/20 text-white/70 hover:border-white/50 hover:text-white"
+                  }`}
+                >
+                  Enquire
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Check-In / Check-Out */}
+      <section className="py-20 md:py-24 border-b border-white/10" style={{ backgroundColor: "#0D0D2A" }}>
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-14"
+          >
+            <p className="text-xs font-medium uppercase tracking-[0.25em] gradient-text mb-4">Tenancy Transitions</p>
+            <h2 className="text-3xl md:text-4xl font-serif text-white">Check-In & Check-Out</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px" style={{ backgroundColor: "rgba(255,255,255,0.07)" }}>
+            {checkInOutPricing.map(({ title, prices, features }, i) => (
+              <motion.div
+                key={title}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="flex flex-col p-8 md:p-10"
+                style={{ backgroundColor: "#16163F" }}
+              >
+                <h3 className="text-xl font-serif text-white mb-8">{title}</h3>
+
+                <div className="mb-8 space-y-2 border-b border-white/10 pb-8">
+                  {prices.map(([size, price]) => (
+                    <div key={size} className="flex items-baseline justify-between gap-4">
+                      <span className="text-sm text-white/50 font-light">{size}</span>
+                      <span className="text-sm font-medium text-white tabular-nums">{price}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <ul className="space-y-3 flex-1">
+                  {features.map((f) => (
+                    <li key={f} className="flex items-start gap-3 text-sm text-white/55 font-light">
+                      <Check className="w-4 h-4 gradient-text shrink-0 mt-0.5" />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mid-Tenancy Inspections */}
+      <section className="py-20 md:py-24 border-b border-white/10" style={{ backgroundColor: "#16163F" }}>
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-14"
+          >
+            <p className="text-xs font-medium uppercase tracking-[0.25em] gradient-text mb-4">Ongoing Management</p>
+            <h2 className="text-3xl md:text-4xl font-serif text-white">Mid-Tenancy Inspections</h2>
+          </motion.div>
+
+          <div className="border border-white/10">
+            {inspectionPricing.map(([name, price], i) => (
+              <motion.div
+                key={name}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="flex items-center justify-between px-8 py-5 border-b border-white/10 last:border-0"
+                style={{ backgroundColor: "#0D0D2A" }}
+              >
+                <span className="text-sm text-white/70 font-light">{name}</span>
+                <span className="text-sm font-medium text-white tabular-nums">{price}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Add-Ons */}
+      <section className="py-20 md:py-24 border-b border-white/10" style={{ backgroundColor: "#0D0D2A" }}>
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-14"
+          >
+            <p className="text-xs font-medium uppercase tracking-[0.25em] gradient-text mb-4">Optional Extras</p>
+            <h2 className="text-3xl md:text-4xl font-serif text-white">Add-Ons</h2>
+          </motion.div>
+
+          <div className="border border-white/10">
+            {addOns.map(([name, price], i) => (
+              <motion.div
+                key={name}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="flex items-center justify-between px-8 py-5 border-b border-white/10 last:border-0"
+                style={{ backgroundColor: "#16163F" }}
+              >
+                <span className="text-sm text-white/70 font-light">{name}</span>
+                <span className="text-sm font-medium text-white tabular-nums">{price}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 md:py-28" style={{ backgroundColor: "#16163F" }}>
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl space-y-6"
+          >
+            <p className="text-xs font-medium uppercase tracking-[0.25em] gradient-text">Agency & Portfolio Packages</p>
+            <h2 className="text-3xl md:text-4xl font-serif text-white leading-snug">
+              Managing multiple properties?
+            </h2>
+            <p className="text-sm text-white/55 font-light leading-relaxed max-w-xl">
+              Volume discounts and bespoke packages are available for letting agencies, portfolio landlords and serviced accommodation operators. Enquire to receive a tailored proposal.
+            </p>
+            <div className="pt-2">
+              <a
+                href="/#contact"
+                className="inline-flex h-11 items-center justify-center gradient-bg text-white px-8 text-sm font-medium tracking-wide transition-opacity hover:opacity-90"
+              >
+                Get in Touch
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

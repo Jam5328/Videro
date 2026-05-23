@@ -1,0 +1,14 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "F20eJbFgpR1uzpCWoEAvx"
+uri = "file://artifacts/vantage/src/assets/images/hero.png"
+type = "image"
+title = "Dark premium UK property exterior"
+
+[[generated]]
+id = "iKbmIe0_AZAZZx9Tea3Fr"
+uri = "file://artifacts/vantage/src/assets/images/interior.png"
+type = "image"
+title = "Clean luxury interior documenting"
