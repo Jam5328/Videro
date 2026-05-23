@@ -57,7 +57,7 @@ export default function Home() {
             <img
               src={vantageIcon}
               alt="Videro"
-              className="w-12 h-12 sm:w-20 sm:h-20 md:w-28 md:h-28 object-contain translate-x-[5%]"
+              className="w-12 h-12 sm:w-20 sm:h-20 md:w-28 md:h-28 object-contain"
             />
             <h1 className="text-5xl sm:text-7xl md:text-9xl font-serif text-white tracking-[0.06em] uppercase leading-none">
               VIDERO
