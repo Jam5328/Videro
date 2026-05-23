@@ -1,0 +1,127 @@
+Create a premium animated promotional banner component that appears globally across all pages of the website.
+
+IMPORTANT:
+This is a TEMPORARY promotional feature only.
+
+The existing website structure, branding, layout hierarchy, spacing system, animations, styling language, component architecture, and overall premium aesthetic MUST remain fully intact.
+
+Do NOT redesign, restructure, restyle, or interfere with:
+
+* existing navigation
+* page layouts
+* hero sections
+* typography system
+* motion system
+* spacing
+* responsiveness
+* component architecture
+* visual identity
+
+This feature should feel like a seamless native extension of the current platform — not a redesign.
+
+The banner must integrate cleanly into the existing luxury SaaS/property-tech aesthetic without disrupting the current UI/UX.
+
+GOAL:
+Display a high-end launch-offer banner targeted at Airbnb hosts and landlords that increases trust and conversions while preserving the current premium brand experience.
+
+BANNER TEXT:
+“Launch Offer — Complimentary Property Management Support For Selected Airbnb Hosts & Landlords”
+
+TECH STACK:
+
+* React
+* TypeScript
+* TailwindCSS
+* Framer Motion
+* Fully compatible with existing architecture and styling system
+
+DESIGN DIRECTION:
+The banner should feel:
+
+* premium
+* minimalist
+* elegant
+* luxury hospitality-tech inspired
+* subtle
+* trustworthy
+* operationally mature
+
+Avoid:
+
+* aggressive marketing aesthetics
+* discount-store styling
+* flashy colors
+* spammy animations
+* intrusive overlays
+* anything visually louder than the existing design system
+
+STYLE REQUIREMENTS:
+
+* Sticky top banner across all pages
+* Slim/non-intrusive height
+* Dark translucent/glassmorphism aesthetic
+* Soft backdrop blur
+* Elegant subtle animated shimmer/light sweep
+* Premium typography and spacing
+* Seamless integration with navbar/header
+* Preserve existing spacing rhythm
+* Mobile-first responsive behavior
+
+FUNCTIONAL REQUIREMENTS:
+
+* Persist across all routes/pages
+* Easily toggled on/off via config variable
+* Include dismiss button with localStorage persistence
+* No layout shift
+* No hydration issues
+* Accessibility compliant
+* Performance optimized
+
+ANIMATION REQUIREMENTS:
+Use Framer Motion for:
+
+* smooth fade/slide reveal
+* subtle luxury motion
+* elegant dismissal transitions
+* restrained hover microinteractions
+
+Animations should feel refined and understated — similar to premium SaaS platforms.
+
+COPY EMPHASIS:
+Subtly emphasize:
+
+* “Launch Offer”
+* “Complimentary”
+* “Selected Airbnb Hosts & Landlords”
+
+without making the banner feel sales-heavy.
+
+OPTIONAL CTA:
+Include a subtle premium CTA such as:
+
+* “Book A Free Consultation”
+* “Apply Now”
+
+The CTA must remain secondary to the banner message and consistent with the existing UI hierarchy.
+
+IMPLEMENTATION REQUIREMENTS:
+
+* Create reusable production-ready component
+* Include TypeScript typings
+* Include clean Tailwind implementation
+* Add integration instructions
+* Show exactly where to inject into root layout/app shell
+* Ensure compatibility with existing navbar stacking/z-index
+* Respect existing design tokens/theme system
+* Maintain existing responsive behavior
+
+DELIVERABLES:
+
+1. Full production-ready component
+2. Integration instructions
+3. Required dependency notes
+4. Accessibility handling
+5. Mobile responsiveness refinements
+6. Optional premium animation enhancements
+
+The final implementation should feel like a temporary premium announcement layer added to an already-established luxury platform — not a redesign or visual interruption.
