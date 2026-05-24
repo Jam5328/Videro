@@ -357,7 +357,7 @@ export default function Pricing() {
       </section>
 
       {/* CTA — Agency & Portfolio Packages with parallax image */}
-      <section ref={ctaRef} className="relative overflow-hidden pt-20 pb-4 md:pt-24 md:pb-6" style={{ backgroundColor: "#0D0D2A" }}>
+      <section ref={ctaRef} className="relative overflow-hidden pt-20 pb-[38px] md:pt-24 md:pb-[54px]" style={{ backgroundColor: "#0D0D2A" }}>
         {/* Parallax image — 600px tall, ~300px visible at any time */}
         <img
           src={bristolHouses}
