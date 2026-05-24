@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import bristolAerial from "@/assets/images/bristol-aerial.jpg";
-import bristolRooftops from "@/assets/images/bristol-rooftops.jpg";
 import vantageIcon from "@/assets/images/vantage-icon.png";
 import LeadForm from "@/components/forms/LeadForm";
 
@@ -18,8 +17,6 @@ const platformLogos = [
 export default function Home() {
   const heroRef = useRef<HTMLElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const contactRef = useRef<HTMLElement>(null);
-  const [contactImgY, setContactImgY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,20 +27,6 @@ export default function Home() {
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const el = contactRef.current;
-    if (!el) return;
-    function update() {
-      const rect = el!.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const prog = (vh - rect.top) / (vh + rect.height);
-      setContactImgY((prog * 100) - 50);
-    }
-    window.addEventListener("scroll", update, { passive: true });
-    update();
-    return () => window.removeEventListener("scroll", update);
   }, []);
 
   return (
@@ -358,15 +341,8 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section ref={contactRef} id="contact" className="relative overflow-hidden pt-20 pb-[50px] md:pt-24 md:pb-[68px] border-t border-white/10" style={{ backgroundColor: "#0D0D2A" }}>
-        <img
-          src={bristolRooftops}
-          alt="Bristol"
-          className="absolute left-0 w-full object-cover object-center pointer-events-none select-none"
-          style={{ height: "600px", top: `calc(-150px + ${contactImgY}px)` }}
-        />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(13,13,42,0.97), rgba(22,22,63,0.82), rgba(13,13,42,0.55))" }} />
-        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-8">
+      <section id="contact" className="py-24 border-t border-white/10" style={{ backgroundColor: "#16163F" }}>
+        <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
