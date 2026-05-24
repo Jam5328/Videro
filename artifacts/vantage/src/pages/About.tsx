@@ -172,11 +172,10 @@ export default function About() {
         <img
           src={bristolStreetArt}
           alt="Bristol"
-          className="absolute left-0 w-full object-cover pointer-events-none select-none"
+          className="absolute left-0 w-full object-cover object-center pointer-events-none select-none"
           style={{
             height: "600px",
-            objectPosition: "center 30%",
-            top: `calc(-80px + ${imgY}px)`,
+            top: `calc(-150px + ${imgY}px)`,
           }}
         />
         {/* Translucent overlay — same gradient as "Why It Matters" */}
