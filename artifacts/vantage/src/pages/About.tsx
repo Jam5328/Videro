@@ -1,4 +1,6 @@
+import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import bristolStreetArt from "@/assets/images/bristol-street-art.jpg";
 
 const clientCategories = [
   {
@@ -16,6 +18,23 @@ const clientCategories = [
 ];
 
 export default function About() {
+  const ctaRef = useRef<HTMLElement>(null);
+  const [imgY, setImgY] = useState(0);
+
+  useEffect(() => {
+    const el = ctaRef.current;
+    if (!el) return;
+    function update() {
+      const rect = el!.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const prog = (vh - rect.top) / (vh + rect.height);
+      setImgY((prog * 100) - 50);
+    }
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+    return () => window.removeEventListener("scroll", update);
+  }, []);
+
   return (
     <div className="w-full">
 
@@ -147,9 +166,24 @@ export default function About() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 md:py-28" style={{ backgroundColor: "#0D0D2A" }}>
-        <div className="max-w-6xl mx-auto px-6">
+      {/* CTA — Get Started with parallax image */}
+      <section ref={ctaRef} className="relative overflow-hidden py-20 md:py-28">
+        {/* Parallax image — 600px tall, ~300px visible at any time */}
+        <img
+          src={bristolStreetArt}
+          alt="Bristol"
+          className="absolute left-0 w-full object-cover object-center pointer-events-none select-none"
+          style={{
+            height: "600px",
+            top: `calc(-150px + ${imgY}px)`,
+          }}
+        />
+        {/* Translucent overlay — same gradient as "Why It Matters" */}
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(to top, rgba(13,13,42,0.97), rgba(22,22,63,0.82), rgba(13,13,42,0.55))" }}
+        />
+        <div className="relative z-10 max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
