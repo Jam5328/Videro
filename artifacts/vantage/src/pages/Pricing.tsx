@@ -7,11 +7,11 @@ const inventoryPricing = [
     subtitle: "Professional photographic inventory reporting",
     popular: false,
     prices: [
-      ["Studio / Room", "£55"],
-      ["1 Bed", "£75"],
-      ["2 Bed", "£90"],
-      ["3 Bed", "£110"],
-      ["4+ Bed", "From £135"],
+      ["Studio / Room", "From £55"],
+      ["1 Bed", "Price on Request"],
+      ["2 Bed", "Price on Request"],
+      ["3 Bed", "Price on Request"],
+      ["4+ Bed", "Price on Request"],
     ],
     features: [
       "High-resolution photographic evidence",
@@ -26,11 +26,11 @@ const inventoryPricing = [
     subtitle: "Inventory reporting with immersive 360° room views",
     popular: true,
     prices: [
-      ["Studio / Room", "£75"],
-      ["1 Bed", "£95"],
-      ["2 Bed", "£115"],
-      ["3 Bed", "£140"],
-      ["4+ Bed", "From £170"],
+      ["Studio / Room", "From £75"],
+      ["1 Bed", "Price on Request"],
+      ["2 Bed", "Price on Request"],
+      ["3 Bed", "Price on Request"],
+      ["4+ Bed", "Price on Request"],
     ],
     features: [
       "Everything in Standard Inventory",
@@ -45,11 +45,11 @@ const inventoryPricing = [
     subtitle: "Premium immersive property walkthrough experience",
     popular: false,
     prices: [
-      ["Studio / Room", "£95"],
-      ["1 Bed", "£125"],
-      ["2 Bed", "£165"],
-      ["3 Bed", "£210"],
-      ["4+ Bed", "From £275"],
+      ["Studio / Room", "From £95"],
+      ["1 Bed", "Price on Request"],
+      ["2 Bed", "Price on Request"],
+      ["3 Bed", "Price on Request"],
+      ["4+ Bed", "Price on Request"],
     ],
     features: [
       "Interactive property walkthrough",
@@ -65,11 +65,11 @@ const checkInOutPricing = [
   {
     title: "Check-In Reports",
     prices: [
-      ["Studio / Room", "£35"],
-      ["1 Bed", "£45"],
-      ["2 Bed", "£55"],
-      ["3 Bed", "£70"],
-      ["4+ Bed", "From £85"],
+      ["Studio / Room", "From £35"],
+      ["1 Bed", "Price on Request"],
+      ["2 Bed", "Price on Request"],
+      ["3 Bed", "Price on Request"],
+      ["4+ Bed", "Price on Request"],
     ],
     features: [
       "Key handover confirmation",
@@ -82,11 +82,11 @@ const checkInOutPricing = [
   {
     title: "Check-Out Reports",
     prices: [
-      ["Studio / Room", "£50"],
-      ["1 Bed", "£65"],
-      ["2 Bed", "£80"],
-      ["3 Bed", "£95"],
-      ["4+ Bed", "From £120"],
+      ["Studio / Room", "From £50"],
+      ["1 Bed", "Price on Request"],
+      ["2 Bed", "Price on Request"],
+      ["3 Bed", "Price on Request"],
+      ["4+ Bed", "Price on Request"],
     ],
     features: [
       "Comparative condition reporting",
@@ -99,17 +99,17 @@ const checkInOutPricing = [
 ];
 
 const inspectionPricing = [
-  ["Standard Property Inspection", "From £45"],
-  ["HMO Inspection", "From £65"],
-  ["Portfolio / Multi-Unit Inspection", "Custom Quote"],
+  ["Standard Property Inspection", "Price on Request"],
+  ["HMO Inspection", "Price on Request"],
+  ["Portfolio / Multi-Unit Inspection", "Price on Request"],
 ];
 
 const addOns = [
-  ["24-Hour Turnaround", "From £25"],
-  ["Weekend / Emergency Booking", "From £35"],
-  ["Additional 360° Coverage", "From £20"],
-  ["Maintenance Reporting Add-On", "From £15"],
-  ["Portfolio Reporting", "Custom Quote"],
+  ["24-Hour Turnaround", "Price on Request"],
+  ["Weekend / Emergency Booking", "Price on Request"],
+  ["Additional 360° Coverage", "Price on Request"],
+  ["Maintenance Reporting Add-On", "Price on Request"],
+  ["Portfolio Reporting", "Price on Request"],
 ];
 
 export default function Pricing() {
