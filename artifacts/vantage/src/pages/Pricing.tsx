@@ -8,10 +8,10 @@ const inventoryPricing = [
     popular: false,
     prices: [
       ["Studio / Room", "From £55"],
-      ["1 Bed", "Price on Request"],
-      ["2 Bed", "Price on Request"],
-      ["3 Bed", "Price on Request"],
-      ["4+ Bed", "Price on Request"],
+      ["1 Bed", "POR"],
+      ["2 Bed", "POR"],
+      ["3 Bed", "POR"],
+      ["4+ Bed", "POR"],
     ],
     features: [
       "High-resolution photographic evidence",
@@ -27,10 +27,10 @@ const inventoryPricing = [
     popular: true,
     prices: [
       ["Studio / Room", "From £75"],
-      ["1 Bed", "Price on Request"],
-      ["2 Bed", "Price on Request"],
-      ["3 Bed", "Price on Request"],
-      ["4+ Bed", "Price on Request"],
+      ["1 Bed", "POR"],
+      ["2 Bed", "POR"],
+      ["3 Bed", "POR"],
+      ["4+ Bed", "POR"],
     ],
     features: [
       "Everything in Standard Inventory",
@@ -46,10 +46,10 @@ const inventoryPricing = [
     popular: false,
     prices: [
       ["Studio / Room", "From £95"],
-      ["1 Bed", "Price on Request"],
-      ["2 Bed", "Price on Request"],
-      ["3 Bed", "Price on Request"],
-      ["4+ Bed", "Price on Request"],
+      ["1 Bed", "POR"],
+      ["2 Bed", "POR"],
+      ["3 Bed", "POR"],
+      ["4+ Bed", "POR"],
     ],
     features: [
       "Interactive property walkthrough",
@@ -66,10 +66,10 @@ const checkInOutPricing = [
     title: "Check-In Reports",
     prices: [
       ["Studio / Room", "From £35"],
-      ["1 Bed", "Price on Request"],
-      ["2 Bed", "Price on Request"],
-      ["3 Bed", "Price on Request"],
-      ["4+ Bed", "Price on Request"],
+      ["1 Bed", "POR"],
+      ["2 Bed", "POR"],
+      ["3 Bed", "POR"],
+      ["4+ Bed", "POR"],
     ],
     features: [
       "Key handover confirmation",
@@ -83,10 +83,10 @@ const checkInOutPricing = [
     title: "Check-Out Reports",
     prices: [
       ["Studio / Room", "From £50"],
-      ["1 Bed", "Price on Request"],
-      ["2 Bed", "Price on Request"],
-      ["3 Bed", "Price on Request"],
-      ["4+ Bed", "Price on Request"],
+      ["1 Bed", "POR"],
+      ["2 Bed", "POR"],
+      ["3 Bed", "POR"],
+      ["4+ Bed", "POR"],
     ],
     features: [
       "Comparative condition reporting",
@@ -99,17 +99,17 @@ const checkInOutPricing = [
 ];
 
 const inspectionPricing = [
-  ["Standard Property Inspection", "Price on Request"],
-  ["HMO Inspection", "Price on Request"],
-  ["Portfolio / Multi-Unit Inspection", "Price on Request"],
+  ["Standard Property Inspection", "POR"],
+  ["HMO Inspection", "POR"],
+  ["Portfolio / Multi-Unit Inspection", "POR"],
 ];
 
 const addOns = [
-  ["24-Hour Turnaround", "Price on Request"],
-  ["Weekend / Emergency Booking", "Price on Request"],
-  ["Additional 360° Coverage", "Price on Request"],
-  ["Maintenance Reporting Add-On", "Price on Request"],
-  ["Portfolio Reporting", "Price on Request"],
+  ["24-Hour Turnaround", "POR"],
+  ["Weekend / Emergency Booking", "POR"],
+  ["Additional 360° Coverage", "POR"],
+  ["Maintenance Reporting Add-On", "POR"],
+  ["Portfolio Reporting", "POR"],
 ];
 
 export default function Pricing() {
@@ -133,6 +133,19 @@ export default function Pricing() {
               All services are priced by property size and scope. Portfolio and agency packages are available — enquire for a tailored proposal.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Pricing Key */}
+      <section style={{ backgroundColor: "#0D0D2A" }}>
+        <div className="max-w-6xl mx-auto px-6 pb-6">
+          <div className="inline-flex items-center gap-3 border border-white/10 px-4 py-2.5">
+            <span className="text-xs font-medium text-white/40 uppercase tracking-[0.2em]">Key</span>
+            <span className="w-px h-3 bg-white/15" />
+            <span className="text-xs font-medium text-white tracking-wide">POR</span>
+            <span className="text-xs text-white/40 font-light">—</span>
+            <span className="text-xs text-white/50 font-light">Price on Request. Contact us for a tailored quote based on your property and requirements.</span>
+          </div>
         </div>
       </section>
 
