@@ -373,22 +373,22 @@ export default function Pricing() {
           className="absolute inset-0"
           style={{ background: "linear-gradient(to top, rgba(13,13,42,0.97), rgba(22,22,63,0.82), rgba(13,13,42,0.55))" }}
         />
-        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-16">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-16 text-center">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl space-y-6"
+            className="max-w-3xl mx-auto space-y-6"
           >
             <p className="text-xs font-medium uppercase tracking-[0.25em] gradient-text">Agency & Portfolio Packages</p>
             <h2 className="text-3xl md:text-4xl font-serif text-white leading-snug">
               Managing multiple properties?
             </h2>
-            <p className="text-sm text-white/55 font-light leading-relaxed max-w-xl">
+            <p className="text-sm text-white/55 font-light leading-relaxed max-w-xl mx-auto">
               Volume discounts and bespoke packages are available for letting agencies, portfolio landlords and serviced accommodation operators. Enquire to receive a tailored proposal.
             </p>
-            <div className="pt-2">
+            <div className="pt-2 flex justify-center">
               <a
                 href="/#contact"
                 className="inline-flex h-11 items-center justify-center gradient-bg text-white px-8 text-sm font-medium tracking-wide transition-opacity hover:opacity-90"
