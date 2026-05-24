@@ -357,7 +357,7 @@ export default function Pricing() {
       </section>
 
       {/* CTA — Agency & Portfolio Packages with parallax image */}
-      <section ref={ctaRef} className="relative overflow-hidden pt-20 pb-[60px] md:pt-28 md:pb-[84px]">
+      <section ref={ctaRef} className="relative overflow-hidden pt-20 pb-4 md:pt-24 md:pb-6" style={{ backgroundColor: "#0D0D2A" }}>
         {/* Parallax image — 600px tall, ~300px visible at any time */}
         <img
           src={bristolHouses}
@@ -373,7 +373,7 @@ export default function Pricing() {
           className="absolute inset-0"
           style={{ background: "linear-gradient(to top, rgba(13,13,42,0.97), rgba(22,22,63,0.82), rgba(13,13,42,0.55))" }}
         />
-        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-16 text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
