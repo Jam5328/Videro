@@ -167,7 +167,7 @@ export default function About() {
       </section>
 
       {/* CTA — Get Started with parallax image */}
-      <section ref={ctaRef} className="relative overflow-hidden py-20 md:py-28">
+      <section ref={ctaRef} className="relative overflow-hidden pt-20 pb-[60px] md:pt-28 md:pb-[84px]">
         {/* Parallax image — 600px tall, ~300px visible at any time */}
         <img
           src={bristolStreetArt}
